@@ -1,6 +1,6 @@
-# [EN] Artnet2Tuya
+# Artnet2Tuya
 
-[DESCRIPTION]
+### [DESCRIPTION]
 This is a Python Bridge between any ArtNet device like QLC+ / Xlights / GrandMA / etc. and your Tuya-Smart Lights (currently only working for Lights but im working on implementing it with smart plugs too)
 It works with all White / RGB Smart bulbs from any brand that uses the Tuya System.
 
@@ -18,13 +18,13 @@ You can also change your desired Universe from that webinterface live.
 
 With this there should never be the need to handle any code or whatever. It can all be managed from within the webinterface.
 
-[DISCLAIMER]
+### [DISCLAIMER]
 While this does integrate flawlessly and works quite nice, you should be aware, that this system has its limits given by the smart-light nature of the bulbs you are using. 
 So first of all: I will not be responsible for any stability issues, or if that breaks your smart lights. These devices are not really built to handle these kinds of requests and i can't guarantee you that it wont affect their lifetime. 
 With that said - There is another very obvious limitation: While it can be used with DMX Systems & Programs - these lights (even addressed locally) are not made for stage lighting purposes. 
 So please don't expect them to do any fast Chasers or Response times like on Wired (or Wireless) DMX as you would with proper PAR-Fixtures.
 
-[USECASES]
+### [USECASES]
 So what CAN you use it for?
 You can use it as a mobile DJ for Weddings for example to adjust the lighting (DIY Uplights or your Stage Lights) like change them to different color scenes or turn off / on / white during dinner / speak.
 You can use it for specific (slower) fade-patterns for home partys with your already installed smart lights.
@@ -40,16 +40,18 @@ Could be useful for Theatre groups that dont want to spend a fortune just to rem
 Ofc this yould also be used as kind of a "Main Switch" for Venues for their DMX Lights .. just make Channel 1 your "Master Switch" and it will remotely turn off the power for all Devices from
 your DMX-Console. 
 
-[INSTALLTION ON WINDOWS]
+### [INSTALLTION ON WINDOWS]
 You will just need Python 3 to be installed (i tested it on Version 3.10, so thats what i can recommend - you have to test it with other versions if you want to use it)
 if you dont have Python installed you can download it at:
 https://www.python.org/downloads/
 
 after you installed it just use pip to install the needed libraries:
 
-pip install tinytuya
-pip install stupidArtnet
-pip install flask
+### :scroll:
+
+> pip install tinytuya
+> pip install stupidArtnet
+> pip install flask
 
 The libraries used are: time, json, threading, os, colorsys, datetime, flask, stupidArtnet, tinytuya
 
@@ -63,7 +65,7 @@ your network like 192.168.178.XX:5000 in your Browser.
 
 Done :)
 
-[INSTALLTION ON RASPBERRY PI or LINUX]
+### [INSTALLTION ON RASPBERRY PI or LINUX]
 
 *optional for using a Raspberry Pi*
 To make this into a stadalone System, i would recommend using a RaspberryPi - this doesnt need to be a beefy expensive one - it runs perfectly fine even on a 25$ Raspberry Pi Zero W (1.1)
@@ -78,9 +80,11 @@ Once installed, you go to the Software-Installer and install Python3, Pip3 and a
 
 after you installed it just use pip to install the needed libraries:
 
-pip install tinytuya
-pip install stupidArtnet
-pip install flask
+### :scroll:
+
+> pip install tinytuya
+> pip install stupidArtnet
+> pip install flask
 
 The libraries used are: time, json, threading, os, colorsys, datetime, flask, stupidArtnet, tinytuya
 
@@ -95,7 +99,7 @@ Then you just run the Python script and open the IP-Address shown in the console
 
 Done :)
 
-[devices.json]
+### [devices.json]
 So in order for you Smart-Devices to work locally you need to get your "Local Keys" for your Devices. (It would be a pain in the bum to use it via the cloud)
 So to get these there are 2 Ways:
 
@@ -117,7 +121,7 @@ https://www.youtube.com/watch?v=YKvGYXw-_cE
 
 either way you will end up with your devices.json file which contains your Local Keys.
 
-[CONFIGURATION]
+### [CONFIGURATION]
 Once you have your devices.json in the same directory you are basically done. Just run the script and connect to the Webinterface.
 
 From there you just click the "Scan Network" button and all your available Smart-Devices should appear in the list (They have to be online for the Scan, so flip your lightswitch on and plug the stuff you want to use in)
