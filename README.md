@@ -23,7 +23,9 @@ Below that you will get an automatically generated patching table that shows you
 ![Screenshot of the Patching Guide](git2.png)
 
 You can also change your desired Universe from that webinterface live.
-![Screenshot of the Universe config](git8.png)
+
+![Screenshot of the Universe config](git8.png)\n
+
 With this there should never be the need to handle any code or whatever. It can all be managed from within the webinterface.
 
 
