@@ -9,7 +9,7 @@ To make usage as simple as possible, i created a Webinterface with Flask on top 
 
 You can host it either on your Windows or Linux PC or you can even host it on a RaspberryPi (Even on a Pi Zero 1.1 like i did)
 
-Once you have your script set up and running you can just connect to http://127.0.0.1:5000 (from local) or http://yourlocalip:5000 (if youre hosting it on a pi or a different machine)
+Once you have your script set up and running you can just connect to http://127.0.0.1:5000 (from local) or http://yourlocalip:5000 (if you're hosting it on a pi or a different machine)
 and you will get an easy webinterface, where you can scan your network for your lights, check which lights you want to use for the artnet bridge, and change the order and (artnet) starting channel for each device. 
 The interface will adjust the channel offset automatically and also auto-adjust the channels live as you order them. You can also delete devices or upload a new devices.json file if you have new lights (i will explain what this is for later)
 Below that you will get an automatically generated patching table that shows you which channel or fader is for what function as well as the DMX / Artnet Address. Live Changes are possible and the Script will auto-adjust to your changes.
@@ -27,14 +27,14 @@ So please don't expect them to do any fast Chasers or Response times like on Wir
 
 ### [USECASES]
 So what CAN you use it for?
-```
-You can use it as a mobile DJ for Weddings for example to adjust the lighting (DIY Uplights or your Stage Lights) like change them to different color scenes or turn off / on / white during dinner / speak.
-You can use it for specific (slower) fade-patterns for home partys with your already installed smart lights.
-You can use it as Blinders for smaller stages (especially cool with bright bulbs)
-You can use it for Theatre scenery (To change ambient lighting or create small effects)
-You can use it as Floodlights and whatever doesnt have very fast pace changes.
-Personally i'm using this System in my Christmas Lightshow for Floodlights and to turn off my smart christmas lights before the show without the need of additional timers in the Tuya app. 
-```  
+
+- You can use it as a mobile DJ for Weddings for example to adjust the lighting (DIY Uplights or your Stage Lights) like change them to different color scenes or turn off / on / white during dinner / speak.
+- You can use it for specific (slower) fade-patterns for home partys with your already installed smart lights.
+- You can use it as Blinders for smaller stages (especially cool with bright bulbs)
+- You can use it for Theatre scenery (To change ambient lighting or create small effects)
+- You can use it as Floodlights and whatever doesnt have very fast pace changes.
+- Personally i'm using this System in my Christmas Lightshow for Floodlights and to turn off my smart christmas lights before the show without the need of additional timers in the Tuya app. 
+
 All that with lights that are far more cheaper than any stage-lighting Equipment with WirelessDMX.
 
 Im currently working on also implementing Smart-Plugs that will react to the "Power" Channel (0-127 = ON / 128-255 OFF) but havent implemented it yet.
@@ -44,7 +44,7 @@ Ofc this yould also be used as kind of a "Main Switch" for Venues for their DMX 
 your DMX-Console. 
 
 
-# [INSTALLTION ON WINDOWS]
+# [1 INSTALLTION ON WINDOWS]
 You will just need Python 3 to be installed (i tested it on Version 3.10, so thats what i can recommend - you have to test it with other versions if you want to use it)
 if you dont have Python installed you can download it at:
 https://www.python.org/downloads/
@@ -64,13 +64,13 @@ Create any directory where you put your files in. The script will need the follo
 - config.json (will be created automatically for you once you save your first configuration)
 ``` 
 
-Then you just run the Python script and open the IP-Address shown in the console (it should work with either your localhost address on port 5000: 127.0.0.1:5000 or your local ip from within
+Then you just run the Python script and open the IP-Address shown in the console (it should work with either your localhost address on port 5000 - 127.0.0.1:5000 or your local ip from within
 your network like 192.168.178.XX:5000 in your Browser. 
 
 Done :)
 
 
-# [INSTALLTION ON RASPBERRY PI or LINUX]
+# [1 INSTALLTION ON RASPBERRY PI or LINUX]
 
 *optional for using a Raspberry Pi*
 To make this into a stadalone System, i would recommend using a RaspberryPi - this doesnt need to be a beefy expensive one - it runs perfectly fine even on a 25$ Raspberry Pi Zero W (1.1)
@@ -106,7 +106,7 @@ Then you just run the Python script and open the IP-Address shown in the console
 Done :)
 
 
-# [devices.json]
+# [2 devices.json]
 So in order for you Smart-Devices to work locally you need to get your "Local Keys" for your Devices. (It would be a pain in the bum to use it via the cloud)
 So to get these there are 2 Ways:
 
@@ -132,7 +132,7 @@ https://www.youtube.com/watch?v=YKvGYXw-_cE
 either way you will end up with your devices.json file which contains your Local Keys.
 
 
-# [CONFIGURATION]
+# [3 CONFIGURATION]
 Once you have your devices.json in the same directory you are basically done. Just run the script and connect to the Webinterface.
 
 From there you just click the "Scan Network" button and all your available Smart-Devices should appear in the list (They have to be online for the Scan, so flip your lightswitch on and plug the stuff you want to use in)
@@ -148,7 +148,7 @@ this will create a config.json file with your settings in the same directory as 
 If a config file exists it will always load from that - to clear it just upload your devices.json again. this will backup and replace your old devices.json and config.json files. 
 You can also delete devices from that list, that you dont need. 
 
-Nice! You're Done! Now you should be able to control your lights via Artnet from your Software (like QLC) - make sure that youre actually sending on the correct interface to your local network. 
+Nice! You're Done! Now you should be able to control your lights via Artnet from your Software (like QLC) - make sure that you're actually sending on the correct interface to your local network. 
 At the bottom there will also be a Patching Guide, so you can setup your Software easily and see which channel is for which function. 
 Each Bulb / Device will use 6 DMX-Addresses.
 
