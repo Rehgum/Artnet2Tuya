@@ -1,5 +1,7 @@
 # Artnet2Tuya
 
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+
 ### [DESCRIPTION]
 This is a Python Bridge between any ArtNet device like QLC+ / Xlights / GrandMA / etc. and your Tuya-Smart Lights (currently only working for Lights but im working on implementing it with smart plugs too)
 It works with all White / RGB Smart bulbs from any brand that uses the Tuya System.
