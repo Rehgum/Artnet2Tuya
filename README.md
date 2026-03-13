@@ -1,17 +1,17 @@
 # Artnet2Tuya
 
-![Screenshot of the Webinterface showing an example of how it could look with your devices.](git1.png)
+![Screenshot of the Webinterface showing an example of how it could look with your devices.](screenshots/git1.png)
 
 ### [DESCRIPTION]
 This is a Python Bridge between any ArtNet device like QLC+ / Xlights / GrandMA / etc. and your Tuya-Smart Lights (currently only working for Lights but im working on implementing it with smart plugs too)
 It works with all White / RGB Smart bulbs from any brand that uses the Tuya System.
 
-![Screenshot of QLC+.](git4.png)
+![Screenshot of QLC+.](screenshots/git4.png)
 
 It uses Python to create a bridge, that will listen to Artnet Signals inside your Network and convert that into local Tuya commands.
 To make usage as simple as possible, i created a Webinterface with Flask on top of it, so that you dont need to mess inside the code for any changes or new lights.
 
-![Screenshot of the running script.](git5.png)
+![Screenshot of the running script.](screenshots/git5.png)
 
 You can host it either on your Windows or Linux PC or you can even host it on a RaspberryPi (Even on a Pi Zero 1.1 like i did)
 
@@ -20,11 +20,11 @@ and you will get an easy webinterface, where you can scan your network for your 
 The interface will adjust the channel offset automatically and also auto-adjust the channels live as you order them. You can also delete devices or upload a new devices.json file if you have new lights (i will explain what this is for later)
 Below that you will get an automatically generated patching table that shows you which channel or fader is for what function as well as the DMX / Artnet Address. Live Changes are possible and the Script will auto-adjust to your changes.
 
-![Screenshot of the Patching Guide](git2.png)
+![Screenshot of the Patching Guide](screenshots/git2.png)
 
 You can also change your desired Universe from that webinterface live.
 
-![Screenshot of the Universe config](git8.png)
+![Screenshot of the Universe config](screenshots/git8.png)
 
 With this there should never be the need to handle any code or whatever. It can all be managed from within the webinterface.
 
@@ -110,7 +110,7 @@ The script will need the following files to run:
 - devices.json (see devices.json to see what that is about and how you can get it)
 - config.json (will be created automatically for you once you save your first configuration)
 ``` 
-![Screenshot of FileZilla](git9.png)
+![Screenshot of FileZilla](screenshots/git9.png)
 
 Then you just run the Python script and open the IP-Address shown in the console
 (it should be something like 192.168.178.XX:5000) in your Browser. 
@@ -150,25 +150,25 @@ Once you have your devices.json in the same directory you are basically done. Ju
 
 From there you just click the "Scan Network" button and all your available Smart-Devices should appear in the list (They have to be online for the Scan, so flip your lightswitch on and plug the stuff you want to use in)
 
-![Screenshot of Scan button](git10.png)
+![Screenshot of Scan button](screenshots/git10.png)
 
 
 Then:
 
 - Use the 3 Stripes on the left to Drag&Drop your devices into the desired order (this will auto-adjust the channels for you but you can also manually set your channels)
   
-  ![Screenshot of DragDrop](git7.png)
+  ![Screenshot of DragDrop](screenshots/git7.png)
   
 - tick the checkbox for the lights in your network that you want to use. They will automatically have the Name you chose in your Tuya App on setup. you will also see the IP-Address and Local Key as well as the version if you need it.
 - then you select which devices are able to RGB and which dont (this shouldnt be needed in the current version, but to be safe just set this correctly)
 - and hit "Save & Apply Changes"...
   
-  ![Screenshot of ApplyButton](git11.png)
+  ![Screenshot of ApplyButton](screenshots/git11.png)
 
 this will create a config.json file with your settings in the same directory as the script, so it will be remembered for the next time (even after restart)...
 If a config file exists it will always load from that - to clear it just upload your devices.json again. this will backup and replace your old devices.json and config.json files. 
 
-![Screenshot of Upload](git6.png)
+![Screenshot of Upload](screenshots/git6.png)
 
 You can also delete devices from that list, that you dont need. 
 
