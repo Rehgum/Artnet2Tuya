@@ -1,6 +1,6 @@
 # Artnet2Tuya
 
-![Screenshot of The Webinterface showing an example of how it could look with your devices.]([https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/Rehgum/Artnet2Tuya/blob/main/git1.png?raw=true))
+![Screenshot of The Webinterface showing an example of how it could look with your devices.]([https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/Rehgum/Artnet2Tuya/blob/main/git1.png)
 
 ### [DESCRIPTION]
 This is a Python Bridge between any ArtNet device like QLC+ / Xlights / GrandMA / etc. and your Tuya-Smart Lights (currently only working for Lights but im working on implementing it with smart plugs too)
