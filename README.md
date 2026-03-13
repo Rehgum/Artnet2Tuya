@@ -24,7 +24,7 @@ Below that you will get an automatically generated patching table that shows you
 
 You can also change your desired Universe from that webinterface live.
 
-![Screenshot of the Universe config](git8.png)\n
+![Screenshot of the Universe config](git8.png)
 
 With this there should never be the need to handle any code or whatever. It can all be managed from within the webinterface.
 
@@ -76,7 +76,7 @@ Create any directory where you put your files in. The script will need the follo
 ``` 
 
 Then you just run the Python script and open the IP-Address shown in the console (it should work with either your localhost address on port 5000 - 127.0.0.1:5000 or your local ip from within
-your network like 192.168.178.XX:5000 in your Browser. 
+your network like http://192.168.178.XX:5000 in your Browser. 
 
 Done :)
 
@@ -149,21 +149,27 @@ either way you will end up with your devices.json file which contains your Local
 Once you have your devices.json in the same directory you are basically done. Just run the script and connect to the Webinterface.
 
 From there you just click the "Scan Network" button and all your available Smart-Devices should appear in the list (They have to be online for the Scan, so flip your lightswitch on and plug the stuff you want to use in)
+
 ![Screenshot of Scan button](git10.png)
 
 
 Then:
 
 - Use the 3 Stripes on the left to Drag&Drop your devices into the desired order (this will auto-adjust the channels for you but you can also manually set your channels)
+  
   ![Screenshot of DragDrop](git7.png)
+  
 - tick the checkbox for the lights in your network that you want to use. They will automatically have the Name you chose in your Tuya App on setup. you will also see the IP-Address and Local Key as well as the version if you need it.
 - then you select which devices are able to RGB and which dont (this shouldnt be needed in the current version, but to be safe just set this correctly)
 - and hit "Save & Apply Changes"...
+  
   ![Screenshot of ApplyButton](git11.png)
 
 this will create a config.json file with your settings in the same directory as the script, so it will be remembered for the next time (even after restart)...
 If a config file exists it will always load from that - to clear it just upload your devices.json again. this will backup and replace your old devices.json and config.json files. 
+
 ![Screenshot of Upload](git6.png)
+
 You can also delete devices from that list, that you dont need. 
 
 Nice! You're Done! Now you should be able to control your lights via Artnet from your Software (like QLC) - make sure that you're actually sending on the correct interface to your local network. 
