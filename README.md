@@ -110,25 +110,25 @@ Done :)
 So in order for you Smart-Devices to work locally you need to get your "Local Keys" for your Devices. (It would be a pain in the bum to use it via the cloud)
 So to get these there are 2 Ways:
 
-1_(the official way):
-```
+## 1 (the official way):
+
 You need to get an API Key from the Tuya IoT Cloud (this is completely free at the time of writing this)
 and i will save myself the work to describe this here in detail, as there is already a great guide on this you can follow on the TinyTuya github documentation:
 https://github.com/jasonacox/tinytuya
 just follow this guide and then run 
 python -m tinytuya wizard
 in your console. this will create the devices.json file for you in your User directory (C:/Users/Admin/)
-``` 
+
 
 just copy it next to your scripts directory if you are on windows or upload it via sftp if you're on a raspberry.
 If your script is already running you can also upload the file via the webinterface (this will save it next to the script for you).
 
-2_(the hacky way):
-```
+## 2 (the hacky way):
+
 You can also follow this Video to get your keys. You will either need a rooted Android device for this of the BlueStacks emulator.
 There is a great video from Mark Watt Tech, so i will just link this here if you want to do it that way (which is also more future-proof):
 https://www.youtube.com/watch?v=YKvGYXw-_cE
-``` 
+
 either way you will end up with your devices.json file which contains your Local Keys.
 
 
@@ -138,12 +138,12 @@ Once you have your devices.json in the same directory you are basically done. Ju
 From there you just click the "Scan Network" button and all your available Smart-Devices should appear in the list (They have to be online for the Scan, so flip your lightswitch on and plug the stuff you want to use in)
 
 Then:
-```
+
 - Use the 3 Stripes on the left to Drag&Drop your devices into the desired order (this will auto-adjust the channels for you but you can also manually set your channels)
 - tick the checkbox for the lights in your network that you want to use. They will automatically have the Name you chose in your Tuya App on setup. you will also see the IP-Address and Local Key as well as the version if you need it.
 - then you select which devices are able to RGB and which dont (this shouldnt be needed in the current version, but to be safe just set this correctly)
 - and hit "Save & Apply Changes"...
-``` 
+
 this will create a config.json file with your settings in the same directory as the script, so it will be remembered for the next time (even after restart)...
 If a config file exists it will always load from that - to clear it just upload your devices.json again. this will backup and replace your old devices.json and config.json files. 
 You can also delete devices from that list, that you dont need. 
