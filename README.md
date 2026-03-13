@@ -15,14 +15,15 @@ The interface will adjust the channel offset automatically and also auto-adjust 
 Below that you will get an automatically generated patching table that shows you which channel or fader is for what function as well as the DMX / Artnet Address. Live Changes are possible and the Script will auto-adjust to your changes.
 
 You can also change your desired Universe from that webinterface live.
-
 With this there should never be the need to handle any code or whatever. It can all be managed from within the webinterface.
+
 
 ### [DISCLAIMER]
 While this does integrate flawlessly and works quite nice, you should be aware, that this system has its limits given by the smart-light nature of the bulbs you are using. 
 So first of all: I will not be responsible for any stability issues, or if that breaks your smart lights. These devices are not really built to handle these kinds of requests and i can't guarantee you that it wont affect their lifetime. 
 With that said - There is another very obvious limitation: While it can be used with DMX Systems & Programs - these lights (even addressed locally) are not made for stage lighting purposes. 
 So please don't expect them to do any fast Chasers or Response times like on Wired (or Wireless) DMX as you would with proper PAR-Fixtures.
+
 
 ### [USECASES]
 So what CAN you use it for?
@@ -42,7 +43,8 @@ Could be useful for Theatre groups that dont want to spend a fortune just to rem
 Ofc this yould also be used as kind of a "Main Switch" for Venues for their DMX Lights .. just make Channel 1 your "Master Switch" and it will remotely turn off the power for all Devices from
 your DMX-Console. 
 
-### [INSTALLTION ON WINDOWS]
+
+# [INSTALLTION ON WINDOWS]
 You will just need Python 3 to be installed (i tested it on Version 3.10, so thats what i can recommend - you have to test it with other versions if you want to use it)
 if you dont have Python installed you can download it at:
 https://www.python.org/downloads/
@@ -67,7 +69,8 @@ your network like 192.168.178.XX:5000 in your Browser.
 
 Done :)
 
-### [INSTALLTION ON RASPBERRY PI or LINUX]
+
+# [INSTALLTION ON RASPBERRY PI or LINUX]
 
 *optional for using a Raspberry Pi*
 To make this into a stadalone System, i would recommend using a RaspberryPi - this doesnt need to be a beefy expensive one - it runs perfectly fine even on a 25$ Raspberry Pi Zero W (1.1)
@@ -102,7 +105,8 @@ Then you just run the Python script and open the IP-Address shown in the console
 
 Done :)
 
-### [devices.json]
+
+# [devices.json]
 So in order for you Smart-Devices to work locally you need to get your "Local Keys" for your Devices. (It would be a pain in the bum to use it via the cloud)
 So to get these there are 2 Ways:
 
@@ -127,7 +131,8 @@ https://www.youtube.com/watch?v=YKvGYXw-_cE
 ``` 
 either way you will end up with your devices.json file which contains your Local Keys.
 
-### [CONFIGURATION]
+
+# [CONFIGURATION]
 Once you have your devices.json in the same directory you are basically done. Just run the script and connect to the Webinterface.
 
 From there you just click the "Scan Network" button and all your available Smart-Devices should appear in the list (They have to be online for the Scan, so flip your lightswitch on and plug the stuff you want to use in)
@@ -149,71 +154,6 @@ Each Bulb / Device will use 6 DMX-Addresses.
 
 
 ## Happy controlling your lights and have fun :)
-
-
-
-# :spoon: LöeffelspracheConverterPY :spoon:
-
-Basic Converter von normaler Sprache[^1] bzw. Text[^1] in die sog. "Löffelsprache" auch "Löfflisch" genannt - mit Python. 
-[^1]: Nur getestet mit Deutsch
-
-Der code enthät ein Dictionary, welches beliebig geändert werden kann.
-So können mit wenigen Änderungen auch die vielen Abwandlungen der Sprache eingepflegt werden.
-Die bekannten werden mit "lef" oder "lof" gebildet, anstatt mit "lew". Oder du kreierst deine eigene Abwandlung.
-
-### :scroll: Benötigt wird folgende Library: :scroll:
-**[re] (Regular Expression Operations) aka regex**
-
-Falls nicht vorhanden, kann diese über pip installiert werden:
-> pip install regex
-
-### :open_book: Das Dictionary ist wiefolgt aufgebaut: :open_book:
-```
-rep_dict = {'a': 'alewa',
-            'e': 'elewe',
-            'i': 'ilewi',
-            'o': 'olewo',
-            'u': 'ulewu',
-            'ä': 'älewä',
-            'ö': 'ölewö',
-            'ü': 'ülewü',
-            'ei': 'eilewei',
-            'ie': 'ielewie',
-            'au': 'aulewau'}
-```           
-Hier können abwandlungen der Sprache angelegt werden, oder auch zusätzliche Werte zur weiteren "Verschlüsselung" hinzugefügt werden.
-
-# [EN]
-# :spoon: SpoonSpeechConverterPY :spoon:
-
-Basic converter from normal speech[^2] or text[^2] to the so called "Löffelsprache" also known as "Löfflisch" - with Python. 
-[^2]: tested with german. even though this documentation is in english, i think this won't work with english. But if there's something simmilar in the english language please let me know how it works and commit your code to the project.
-
-The code contains a dictionary, which you can edit to your needs.
-This way you can easily make changes and implement dozens of varieties to the speech.
-Known ones can be built with "lef" or "lof" instead of "lew" (or maybe create your own one?)
-
-### :scroll: Needed library: :scroll:
-**[re] (Regular Expression Operations) aka regex**
-
-If you don't have this in your python installation already, you can install it using pip:
-> pip install regex
-
-### :open_book: The dictionary is built like this: :open_book:
-```
-rep_dict = {'a': 'alewa',
-            'e': 'elewe',
-            'i': 'ilewi',
-            'o': 'olewo',
-            'u': 'ulewu',
-            'ä': 'älewä',
-            'ö': 'ölewö',
-            'ü': 'ülewü',
-            'ei': 'eilewei',
-            'ie': 'ielewie',
-            'au': 'aulewau'}
-```           
-Here you can create varieties of the speech, or you can also add additional letters for further "decryption".
 
 
 _coded with :purple_heart: by_ **Fabian Rehme**
